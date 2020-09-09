@@ -49,7 +49,7 @@ func Collector(url string, projectPath string) {
 	c.OnRequest(func(r *colly.Request) {
 		link := r.URL.String()
 		if url == link {
-			HTMLExtractor(link, projectPath)
+			Extractor(link, projectPath)
 		}
 	})
 
